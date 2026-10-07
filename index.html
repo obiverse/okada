@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#141022" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="./icons/apple-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="OKADA" />
+    <title>OKADA</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141022'/%3E%3Ctext x='32' y='46' font-family='system-ui' font-weight='900' font-style='italic' font-size='40' text-anchor='middle' fill='%23f7c600'%3EO%3C/text%3E%3C/svg%3E" />
+    <script type="module" crossorigin src="./assets/index-DpN8ZtYg.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/clock-BoJO7qgr.js">
+    <link rel="modulepreload" crossorigin href="./assets/settings-Bh0hWHX2.js">
+    <link rel="modulepreload" crossorigin href="./assets/renderer-Cl-8kZGR.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-CHRLTsNB.css">
+  </head>
+  <body>
+    <canvas id="view"></canvas>
+    <div id="ui"></div>
+    <div id="debug"></div>
+    <!-- Loading (W4): shown until the scene boots (main.ts removes it). Plain HTML: it paints before any JS. -->
+    <div id="loading">
+      <b>OKADA</b><span>LAGOS NIGHT RUN</span><i></i>
+      <p class="tip" data-tips='[
+        "Kicks are slow but send riders flying: aim them at the barrier.",
+        "Boost refills while you ride. Save it for the Eko Bridge straight.",
+        "Press jab early: the next one comes out the moment you can move.",
+        "Rainy season: the road is slick. Brake earlier, turn wider.",
+        "Time Trial: your ghost is your best run. Beat it, and it becomes the new ghost.",
+        "Okadas are Lagos&apos; motorcycle taxis: the fastest way through go-slow traffic.",
+        "Makoko, the village on the water, appears off the Third Mainland Bridge.",
+        "Danfo: the yellow buses of Lagos. Don&apos;t rear-end one."
+      ]'></p>
+    </div>
+    <script>
+      // A tip, picked before the game's code arrives.
+      const t = document.querySelector('#loading .tip');
+      const tips = JSON.parse(t.dataset.tips);
+      t.textContent = tips[Math.floor(Math.random() * tips.length)];
+    </script>
+  </body>
+</html>
