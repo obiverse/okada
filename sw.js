@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v22'; // v22 = 2.6: Ouagadougou, the Sahel road, the convoy, the dream road
+const CACHE = 'okada-v23'; // v23 = 2.7: earned nitro + the V8
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
