@@ -15,10 +15,10 @@
     <!-- On the Kwataverse Arcade (D28), the arcade's coin.js signs with @noble: the same import map as /games/. Unused elsewhere. -->
 
     <script type="importmap">{"imports":{"@noble/curves/":"/vendor/curves/","@noble/hashes/":"/vendor/hashes/"}}</script>
-    <script type="module" crossorigin src="./assets/index-BwpmaKsQ.js"></script>
+    <script type="module" crossorigin src="./assets/index-DAMPEvZ1.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/clock-BoJO7qgr.js">
     <link rel="modulepreload" crossorigin href="./assets/look-BKYnhMN6.js">
-    <link rel="modulepreload" crossorigin href="./assets/okada-8urAIX3P.js">
+    <link rel="modulepreload" crossorigin href="./assets/okada-OGaxAznt.js">
     <link rel="stylesheet" crossorigin href="./assets/index-BOD0ZBik.css">
   </head>
   <body>
@@ -27,23 +27,40 @@
     <div id="debug"></div>
     <!-- Loading (W4): shown until the scene boots (main.ts removes it). Plain HTML: it paints before any JS. -->
     <div id="loading">
-      <b>OKADA</b><span>LAGOS NIGHT RUN</span><i></i>
-      <p class="tip" data-tips='[
-        "Kicks are slow but send riders flying: aim them at the barrier.",
-        "Boost refills while you ride. Save it for the Eko Bridge straight.",
-        "Press jab early: the next one comes out the moment you can move.",
-        "Rainy season: the road is slick. Brake earlier, turn wider.",
-        "Time Trial: your ghost is your best run. Beat it, and it becomes the new ghost.",
-        "Okadas are Lagos&apos; motorcycle taxis: the fastest way through go-slow traffic.",
-        "Makoko, the village on the water, appears off the Third Mainland Bridge.",
-        "Danfo: the yellow buses of Lagos. Don&apos;t rear-end one."
-      ]'></p>
+      <b>OKADA</b><span class="load-city">AFRICA'S MOTO-TAXI RACER</span><i></i>
+      <p class="tip"></p>
     </div>
     <script>
-      // A tip, picked before the game's code arrives.
-      const t = document.querySelector('#loading .tip');
-      const tips = JSON.parse(t.dataset.tips);
-      t.textContent = tips[Math.floor(Math.random() * tips.length)];
+      // Loading (W4, D33): the city you ride, and a tip: about the game, about Africa's moto-taxis, about your city.
+      (function () {
+        var city = 'lagos';
+        try { city = new URLSearchParams(location.search).get('city') || JSON.parse(localStorage.getItem('okada:settings') || '{}').city || 'lagos'; } catch (e) {}
+        var titles = { lagos: 'LAGOS NIGHT RUN', douala: 'DOUALA · BENSKIN RUN' };
+        var tips = {
+          all: [
+            'Kicks are slow but send riders flying: aim them at the barrier.',
+            'Press jab early: the next one comes out the moment you can move.',
+            'Rainy season: the road is slick. Brake earlier, turn wider.',
+            'Time Trial: your ghost is your best run. Beat it, and it becomes the new ghost.',
+            'From Lagos to Kampala, the moto-taxi has a hundred names: okada, benskin, zémidjan, boda boda.',
+            'Cowries were money across West Africa for centuries, long before coins.'
+          ],
+          lagos: [
+            'Okadas are Lagos\' motorcycle taxis: the fastest way through go-slow traffic.',
+            'Makoko, the village on the water, appears off the Third Mainland Bridge.',
+            'Danfo: the yellow buses of Lagos. Don\'t rear-end one.'
+          ],
+          douala: [
+            'In Douala the moto-taxi is the benskin, from the Pidgin "bend skin": you lean in.',
+            'Douala is one of the rainiest cities on Earth: keep your tyres on the paint.',
+            'Makossa, the rhythm that took Cameroon to the world, was born in Douala.',
+            'La Nouvelle Liberté at the Deïdo roundabout is welded from the city\'s own scrap metal.'
+          ]
+        };
+        var t = document.querySelector('#loading .tip'), list = tips.all.concat(tips[city] || [], tips[city] || []);
+        t.textContent = list[Math.floor(Math.random() * list.length)];
+        document.querySelector('#loading .load-city').textContent = titles[city] || titles.lagos;
+      })();
     </script>
   </body>
 </html>
