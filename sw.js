@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v18'; // v18 = 2.2: Douala from photos
+const CACHE = 'okada-v19'; // v19 = 2.3: Douala's spirit (daylight, photos, research)
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
