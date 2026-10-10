@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v37'; // v37 = 2.20: smooth boost, artlab's engine voices, KẸ̀KẸ́ ÀṢẸ
+const CACHE = 'okada-v38'; // v38 = 2.21: the modelled okada, city bikes, Garage setup
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
