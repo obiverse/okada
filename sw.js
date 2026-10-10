@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v40'; // v40 = 2.23: modelled cities (the building kit)
+const CACHE = 'okada-v41'; // v41 = 2.24: the street kit (footbridges, shelters, kekes, trees, birds)
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
