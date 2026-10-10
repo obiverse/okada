@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v33'; // v33 = 2.16: billboards that pay, the Elusive Ride, commentary
+const CACHE = 'okada-v34'; // v34 = 2.17: kwataverse contract, duels, showroom
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
