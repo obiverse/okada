@@ -1,1 +1,0 @@
-var e={public:[`wss://relay.damus.io`,`wss://nos.lol`],kwataverse:`wss://relay.kwataverse.com`,signer:[`wss://relay.damus.io`,`wss://nos.lol`],adHost:``,send:{claims:!0,saves:!0,funnel:!0,impressions:!0}};export{e as t};
