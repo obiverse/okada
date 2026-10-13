@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v52'; // v52 = 2.34: the Navigator
+const CACHE = 'okada-v53'; // v53 = 2.34.1: no zoom on phones; hidden cards stay hidden
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
