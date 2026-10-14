@@ -11,18 +11,18 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="OKADA" />
     <title>OKADA</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141022'/%3E%3Ctext x='32' y='46' font-family='system-ui' font-weight='900' font-style='italic' font-size='40' text-anchor='middle' fill='%23f7c600'%3EO%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" type="image/svg+xml" href="./icons/mark.svg" />
     <!-- On the Kwataverse Arcade (D28), the arcade's coin.js signs with @noble: the same import map as /games/. Unused elsewhere. -->
 
     <script type="importmap">{"imports":{"@noble/curves/":"/vendor/curves/","@noble/hashes/":"/vendor/hashes/"}}</script>
-    <script type="module" crossorigin src="./assets/index-DCq-81zX.js"></script>
+    <script type="module" crossorigin src="./assets/index-C4S9lFxO.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/clock-BoJO7qgr.js">
-    <link rel="modulepreload" crossorigin href="./assets/look-DlaIVZBx.js">
-    <link rel="modulepreload" crossorigin href="./assets/okada-KU8q-j-m.js">
+    <link rel="modulepreload" crossorigin href="./assets/look-DmDfBWF7.js">
+    <link rel="modulepreload" crossorigin href="./assets/okada-Du6WW8eI.js">
     <link rel="modulepreload" crossorigin href="./assets/pure-ChKQHQtn.js">
     <link rel="modulepreload" crossorigin href="./assets/relays-rnpr98kX.js">
-    <link rel="modulepreload" crossorigin href="./assets/platform-Czq255iP.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-cS6TeZpc.css">
+    <link rel="modulepreload" crossorigin href="./assets/platform-Bhq3CWc_.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-D_I3eDjI.css">
   </head>
   <body>
     <canvas id="view"></canvas>
@@ -30,7 +30,7 @@
     <div id="debug"></div>
     <!-- Loading (W4): shown until the scene boots (main.ts removes it). Plain HTML: it paints before any JS. -->
     <div id="loading">
-      <b>OKADA</b><span class="load-city">AFRICA'S MOTO-TAXI RACER</span><i></i>
+      <svg class="wordmark load-mark" viewBox="-24 -16 520 136" height="80" role="img" aria-label="OKADA"> <defs><linearGradient id="wm-load" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c600"/><stop offset="1" stop-color="#e63b2e"/></linearGradient></defs> <g transform="skewX(-12) translate(14 0)"> <g transform="translate(7 9)"><g fill="none" stroke="#1a0f24" stroke-width="34" stroke-linejoin="round" stroke-linecap="round"><circle cx="50" cy="50" r="38"/><path d="M126 10 V90 M178 10 L136 52 L178 90 M202 90 L238 10 L274 90 M220 64 H256 M300 10 H320 A40 40 0 0 1 320 90 H300 Z M384 90 L420 10 L456 90 M402 64 H438"/></g></g> <g fill="none" stroke="#1a0f24" stroke-width="34" stroke-linejoin="round" stroke-linecap="round"><circle cx="50" cy="50" r="38"/><path d="M126 10 V90 M178 10 L136 52 L178 90 M202 90 L238 10 L274 90 M220 64 H256 M300 10 H320 A40 40 0 0 1 320 90 H300 Z M384 90 L420 10 L456 90 M402 64 H438"/></g> <g fill="none" stroke="url(#wm-load)" stroke-width="20" stroke-linejoin="round" stroke-linecap="round"><circle cx="50" cy="50" r="38"/><path d="M126 10 V90 M178 10 L136 52 L178 90 M202 90 L238 10 L274 90 M220 64 H256 M300 10 H320 A40 40 0 0 1 320 90 H300 Z M384 90 L420 10 L456 90 M402 64 H438"/></g> <path d="M50 50 L50.0 28.0 M50 50 L69.1 61.0 M50 50 L30.9 61.0" stroke="#1a0f24" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="50" r="8" fill="#1a0f24"/> </g></svg><span class="load-city">AFRICA'S MOTO-TAXI RACER</span><i></i>
       <p class="tip"></p>
     </div>
     <script>
@@ -51,6 +51,7 @@
           lagos: [
             'Okadas are Lagos\' motorcycle taxis: the fastest way through go-slow traffic.',
             'Makoko, the village on the water, appears off the Third Mainland Bridge.',
+            'Real okadas can\'t ride Lagos\'s bridges and highways: the law keeps them off. The Night Run is our one night on the bridge.',
             'Danfo: the yellow buses of Lagos. Don\'t rear-end one.'
           ],
           douala: [

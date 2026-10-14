@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-23.529411764705884 -23.529411764705884 147.05882352941177 147.05882352941177" width="512" height="512">
+    <defs><linearGradient id="mk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7c600"/><stop offset="1" stop-color="#e63b2e"/></linearGradient>
+    <radialGradient id="sky" cx="50%" cy="35%" r="75%"><stop offset="0" stop-color="#3a2468"/><stop offset="1" stop-color="#141022"/></radialGradient></defs>
+    <rect x="-23.529411764705884" y="-23.529411764705884" width="147.05882352941177" height="147.05882352941177" fill="url(#sky)"/>
+    <path d="M-19.529411764705884 40 H4" stroke="#f7c600" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/><path d="M-19.529411764705884 56 H10" stroke="#f7c600" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/><path d="M-19.529411764705884 72 H16" stroke="#f7c600" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+    <g transform="skewX(-12) translate(10 0)">
+      <g transform="translate(5 7)" fill="none" stroke="#1a0f24" stroke-width="30"><circle cx="50" cy="50" r="38"/></g>
+      <g fill="none" stroke="#1a0f24" stroke-width="30"><circle cx="50" cy="50" r="38"/></g>
+      <g fill="none" stroke="url(#mk)" stroke-width="18"><circle cx="50" cy="50" r="38"/></g>
+      <path d="M50 50 L50.0 28.0 M50 50 L69.1 61.0 M50 50 L30.9 61.0" stroke="#1a0f24" stroke-width="7" stroke-linecap="round"/><circle cx="50" cy="50" r="8" fill="#1a0f24"/>
+    </g></svg>

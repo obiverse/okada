@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v56'; // v56 = 2.36.1: relays as kwataverse sets them up
+const CACHE = 'okada-v57'; // v57 = 2.37.0: the Ndedi pass (brand, HUD, cloth, city sound)
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
