@@ -1,7 +1,7 @@
 // OKADA service worker: play offline once you've played online.
 //   /assets/*  content-hashed (never change)  → cache first
 //   the page, manifest, icons (change per build) → network first, cache when offline
-const CACHE = 'okada-v57'; // v57 = 2.37.0: the Ndedi pass (brand, HUD, cloth, city sound)
+const CACHE = 'okada-v58'; // v58 = 2.38.0: the genre pass (racecraft, letters, knockout, rewind, photo)
 const SHELL = ['./', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png'];
 
 self.addEventListener('install', (e) => {
